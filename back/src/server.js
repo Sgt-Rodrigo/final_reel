@@ -1,12 +1,13 @@
 const express = require('express');
 const router = require('./routes');
-const morgan = require('morgan');
 const cors = require('cors');
+const morgan = require('morgan');
+
 const app = express();
 
-app.use(morgan('dev'));
-app.use(cors());
-app.use(express.json());
+app.use(morgan('dev')); //*? outputs useful traffic data
+app.use(cors()); //*? for security and availability
+app.use(express.json()); //*? parses the req to a JS object.
 
 //* my personalized middleware
 app.use((req, res, next)=>{

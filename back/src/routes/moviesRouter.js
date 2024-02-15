@@ -6,7 +6,13 @@ const moviesRouter = Router();
 
 //* assigs controller based on request method
 moviesRouter.get('/', moviesController.getAllMovies);
-moviesRouter.post('/', validateMovie, moviesController.insertMovie);
+// moviesRouter.get('/:title', moviesController.getMovieByTitle);
+moviesRouter.get('/title', moviesController.getMovieByTitle);
+
+moviesRouter.post('/', validateMovie, moviesController.addMovie);
 moviesRouter.delete('/', moviesController.deleteAllMovies); 
+
+//*params
+moviesRouter.get('/:id', moviesController.getMovieById);
 
 module.exports = moviesRouter;

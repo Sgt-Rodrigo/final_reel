@@ -1,6 +1,48 @@
 // const axios = require('axios');
 const Movie = require('../models/Movie');
 
+
+module.exports = {
+    async fetchMovies(){
+        try {
+            const movies = await Movie.find()
+            return movies
+        } catch (error) {
+            console.log('Movies not found')
+        }
+    },
+
+    async addMovie(reqBody){
+        const newMovie = Movie.create(reqBody);
+        return newMovie;
+    },
+
+    async getMovieById(id) {
+        const movie = await Movie.findById(id);
+        return movie
+    },
+
+    async getMovieByTitle(title) {
+        const movie = await Movie.findOne({title});
+        return movie
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const URL = `https://students-api.2.us-1.fl0.io/movies`;
 
 //* class with manual disjunction property verification (using OR |)
@@ -69,13 +111,3 @@ const Movie = require('../models/Movie');
 //     },
 // }
 
-module.exports = {
-    async fetchMovies(){
-        try {
-            const movies = await Movie.find()
-            return movies
-        } catch (error) {
-            console.log('Movies not found')
-        }
-    }
-}
