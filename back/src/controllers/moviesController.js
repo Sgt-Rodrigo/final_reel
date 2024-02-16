@@ -17,9 +17,11 @@ module.exports = {
     // const { title, year, director, duration, genre, rate, poster} = req.body;
   try {
       const newMovie = await moviesService.addMovie(req.body);
-      res.status(201).json(newMovie);
+      res.redirect('http://localhost:3000/');
+      // res.status(201).json(newMovie);
   } catch (error) {
-    
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
   }
   },
 
