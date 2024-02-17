@@ -1,5 +1,5 @@
 import Movie from './movie';
-const uuid = require('uuid').v4;
+// const uuid = require('uuid').v4;
 
 export default class Repository {
     constructor(){
@@ -8,8 +8,8 @@ export default class Repository {
 
     //* takes 1 movieObject  > pushes new movieObject + id
     addMovie(movieData){
-        const id = uuid();
-        const newMovie = new Movie({...movieData, id});
+        // const id = uuid();
+        const newMovie = new Movie({...movieData});
 
         this.allMovies.push(newMovie);
 
