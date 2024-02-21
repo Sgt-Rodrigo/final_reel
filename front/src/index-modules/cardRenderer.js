@@ -9,7 +9,9 @@ export default class CardRenderer {
         
             //*? card composition
             const cardDiv = document.createElement('div');
-            cardDiv.classList.toggle('card');        
+            cardDiv.classList.toggle('card');
+            // const cardLink = document.createElement('a');
+            // cardLink.classList.toggle('card-link-wrapper');  
             const cardImage = document.createElement('img');
             cardImage.classList.toggle('card-img');
             cardImage.alt = `${movie.title} poster`;
