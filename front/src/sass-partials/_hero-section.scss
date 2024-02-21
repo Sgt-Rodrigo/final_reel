@@ -1,0 +1,54 @@
+//*? animation
+@keyframes bg-animation {
+    0% {
+        background-position: 0% 50%;
+        background-size: 200% 100%;
+    }
+    50% {
+        background-position: 100% 50%;
+        background-size: 200% 100%;
+    }
+    100% {
+        background-position: 0% 50%;
+        background-size: 200% 100%;
+    }
+}
+
+
+.hero {
+    min-height: 100svh;
+    background-image: url('./assets/images/hero-image.jpg');
+    background-position: center bottom;
+    background-color: #505050;
+    background-blend-mode: difference; 
+    
+}
+
+
+.hero-title {
+    //*mask effect    
+    background-image: linear-gradient(to right, rgb(215, 10, 161), rgb(28, 237, 69));
+    background-clip: text;
+    color: transparent;
+    background-size: 200%;
+    animation: bg-animation 5s linear infinite alternate; 
+    letter-spacing: 20px;
+}
+
+.hero-para {
+    background-image: linear-gradient(to right, rgb(95, 70, 224), rgb(237, 241, 7));
+    background-clip: text;
+    color: transparent;
+    background-size: 200%;
+    animation: bg-animation 5s linear infinite alternate; 
+}
+
+.hero-cta {
+    background-color: rgba(48, 48, 48,0.7);
+
+    &__para {
+        word-spacing: 5px;
+        line-height: 1.5;
+    }
+
+}

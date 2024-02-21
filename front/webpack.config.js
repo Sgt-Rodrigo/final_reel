@@ -17,21 +17,33 @@ const config = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].bundle.js",
-    clean: true,
+    clean: true,   
   },
   devtool: "source-map",
-  devServer: {
-    static: {
-      directory: path.resolve(__dirname, "src"),
+  //*? this server set up watches the 'src'> slower
+  // devServer: {
+  //   static: {
+  //     directory: path.resolve(__dirname, "src"),
+  //   },
+  //   watchFiles: ["src/**/*.html"],
+  //   open: true,
+  //   host: "localhost",
+  //   port: 3000,
+  //   hot: true,
+  //   compress: true,
+  //   historyApiFallback: true,
+  // }, 
+  //*? this one is simpler, used along with watch script
+    devServer: {
+      static: './dist',
+      open: true,
+      host: 'localhost',
+      port: 3000,     
+      historyApiFallback: true,
     },
-    watchFiles: ["src/**/*.html"],
-    open: true,
-    host: "localhost",
-    port: 3000,
-    hot: true,
-    compress: true,
-    historyApiFallback: true,
-  },
+    optimization: {
+      runtimeChunk: 'single',
+    }, //*for several entry points
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "src/index.html"), //*?watch this template
@@ -62,10 +74,10 @@ const config = {
         use: "html-loader",
       },
 
-      // {
-      //     test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif|jpeg|ico)$/i,
-      //     type: 'asset',
-      // },
+      {
+          test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif|jpeg|ico)$/i,
+          type: 'asset',
+      },
 
       // Add your rules for custom modules here
       // Learn more about loaders from https://webpack.js.org/loaders/
