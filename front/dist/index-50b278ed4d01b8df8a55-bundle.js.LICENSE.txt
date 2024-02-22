@@ -1,5 +1,0 @@
-/*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
-
-//*! Uncomment this and comment out the async function if cors error is encounter in order to see the cards rendered
-
-//*!! Render Cards on Page

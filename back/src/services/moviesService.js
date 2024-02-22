@@ -1,4 +1,6 @@
 // const axios = require('axios');
+const fs = require("fs");
+const path = require("path");
 const Movie = require("../models/Movie");
 
 module.exports = {
@@ -8,6 +10,23 @@ module.exports = {
       return movies;
     } catch (error) {
       console.log("Movies not found");
+    }
+  },
+
+  async getAddMovieForm() {
+    const formPath = path.resolve(
+      __dirname,
+      "../../../front/src/views/add_movie_form/add_movie_form.html"
+    );
+
+    //* read form file and send data to controller
+    try {
+      const data = await fs.promises.readFile(formPath, { encoding: "utf8" }, ()=>{
+
+      });
+      return data;
+    } catch (err) {
+      console.log(err)
     }
   },
 

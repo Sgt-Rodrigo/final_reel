@@ -7,6 +7,11 @@ async function getAllMovies(req, res) {
   res.json(movies);
 }
 
+async function getAddMovieForm(req, res) {
+  const form = await moviesService.getAddMovieForm();
+  res.send(form);
+}
+
 async function addMovie(req, res) {
   // const { title, year, director, duration, genre, rate, poster} = req.body;  
     const newMovie = await moviesService.addMovie(req.body);
@@ -37,4 +42,5 @@ module.exports = {
   getMovieById: catchAsync(getMovieById),
   getMovieByTitle: catchAsync(getMovieByTitle),
   deleteAllMovies: catchAsync(deleteAllMovies),
+  getAddMovieForm: catchAsync(getAddMovieForm),
 };

@@ -9,10 +9,11 @@ moviesRouter.post('/', validateMovie, moviesController.addMovie);
 moviesRouter.get('/', moviesController.getAllMovies);
 // moviesRouter.get('/:title', moviesController.getMovieByTitle);
 moviesRouter.get('/title', moviesController.getMovieByTitle);
+moviesRouter.get('/add-movie', moviesController.getAddMovieForm);
 
 moviesRouter.delete('/', moviesController.deleteAllMovies); 
 
 //*params
-moviesRouter.get('/:id', moviesController.getMovieById);
+// moviesRouter.get('/:id', moviesController.getMovieById);
 
 module.exports = moviesRouter;

@@ -25,7 +25,7 @@
     <title>- - - F i n a l - - - R e e l - - -</title>
 <script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
 
-<body class="position-relative">
+<body>
     <header class="header p-1">
         <nav class="navbar navbar-expand-lg px-3" data-bs-theme="dark">
             <div class="container">
@@ -42,7 +42,7 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                         <a class="nav-link" href="#grid-title">Browse-Collection</a>
 
-                        <a class="nav-link" href="./views/add_movie_form/add_movie_form.html">
+                        <a class="nav-link test" href="./views/add_movie_form/add_movie_form.html" id="add-movies">
                             Add-Movies
                         </a>
                         <a class="nav-link" href="#">Podcast</a>
@@ -66,15 +66,16 @@
                         <h2 class="hero-para limelight-sm">celebrate cinema one frame at a time</h2>
                     </div>
                 </div>
+
                 <div class="col hero-cta p-4 rounded-5">
-                    <div class="hero-cta__text align-self-start">
-                        <p class="hero-cta__para lead fs-3 d-none d-sm-block">Explore the latest releases, timeless
+                    <div class="hero-cta__text align-self-start" id="hero-cta__text">
+                        <p class="hero-cta__para lead fs-3 d-none d-sm-block" id="hero-cta__para">Explore the latest releases, timeless
                             classics, and hidden gems. Request your favorite films, stay updated with our newsletter,
                             and tune in to our podcast for insightful discussions and behind-the-scenes stories.</p>
-                        <div class="btn-group gap-3 d-flex flex-column flex-sm-row">
+                        <div class="btn-group gap-3 d-flex flex-column flex-sm-row" id="cta-button-group">
                             <a href="#" class="btn btn-altpink btn-lg">SUBSCRIBE</a>
                             <a href="./views/add_movie_form/add_movie_form.html"
-                                class="btn btn-outline-altgreen btn-lg">Add-Movies</a>
+                                class="btn btn-outline-altgreen btn-lg" id="add-movies">Add-Movies</a>
                             <a href="#" class="btn btn-outline-altyellow btn-lg">Today's Grid</a>
                         </div>
                     </div>

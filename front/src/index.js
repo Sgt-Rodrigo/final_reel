@@ -2,5 +2,6 @@
 import './reset.scss';
 import "./main.scss";
 import MovieLoader from "./index-modules/movieLoader";
+import './index-modules/formRenderer';
 
 MovieLoader.loadAndRenderGrid();
