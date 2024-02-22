@@ -1,6 +1,10 @@
+//*? custom
 @forward './custom-bootstrap';
 @forward './utils';
 
+
+//*? components
 @forward './navbar';
 @forward './hero-section';
 @forward './movies-info';
+@forward './footer';

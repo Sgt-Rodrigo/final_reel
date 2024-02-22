@@ -1,5 +1,23 @@
 //*? the card grid
 
+// section.movies-info {
+//     background-color: rgb(209, 207, 207);
+// }
+
+.movies-info {
+    padding-top: 4rem;
+
+    &__divider {
+        width: 50%;
+        margin: 2rem auto;
+    }
+}
+
+.grid-title {
+    text-transform: uppercase;
+    // color: > inherited from body
+}
+
 .card {
     cursor:pointer;
     transform: scale(1);
@@ -8,3 +26,4 @@
         transform: scale(1.05)
     }
 }
+

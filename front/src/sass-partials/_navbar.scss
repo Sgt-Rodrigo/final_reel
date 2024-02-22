@@ -9,3 +9,9 @@
         width: 2rem
     }
   
+    .active {
+        text-shadow: 5px 0 130px white,
+                    -5px 0 30px white,
+                     0 -5px 30px white,
+                     0 5px 30px white;        
+    }

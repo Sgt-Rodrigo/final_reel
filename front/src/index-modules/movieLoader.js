@@ -32,8 +32,7 @@ const URL = 'http://localhost:3001/movies';
 export default class MovieLoader {
 
     static async loadAndRenderGrid() {
-        //*? request data
- 
+        //*? request data 
      const response = await axios.get(URL);    
      
          //*? push data to local storage + id

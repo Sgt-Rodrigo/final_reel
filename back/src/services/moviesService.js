@@ -1,47 +1,31 @@
 // const axios = require('axios');
-const Movie = require('../models/Movie');
-
+const Movie = require("../models/Movie");
 
 module.exports = {
-    async fetchMovies(){
-        try {
-            const movies = await Movie.find()
-            return movies
-        } catch (error) {
-            console.log('Movies not found')
-        }
-    },
-
-    async addMovie(reqBody){
-        const newMovie = Movie.create(reqBody);
-        return newMovie;
-    },
-
-    async getMovieById(id) {
-        const movie = await Movie.findById(id);
-        return movie
-    },
-
-    async getMovieByTitle(title) {
-        const movie = await Movie.findOne({title});
-        return movie
+  async fetchMovies() {
+    try {
+      const movies = await Movie.find().sort({ _id: -1 });
+      return movies;
+    } catch (error) {
+      console.log("Movies not found");
     }
+  },
 
-}
+  async addMovie(reqBody) {
+    const newMovie = Movie.create(reqBody);
+    return newMovie;
+  },
 
+  async getMovieById(id) {
+    const movie = await Movie.findById(id);
+    return movie;
+  },
 
-
-
-
-
-
-
-
-
-
-
-
-
+  async getMovieByTitle(title) {
+    const movie = await Movie.findOne({ title });
+    return movie;
+  },
+};
 
 // const URL = `https://students-api.2.us-1.fl0.io/movies`;
 
@@ -63,8 +47,6 @@ module.exports = {
 //     }
 // }
 
-
-
 //* class with dynamic property verification
 // class Movie {
 //     constructor(movieData) {
@@ -76,9 +58,9 @@ module.exports = {
 //           "duration",
 //           "rate",
 //         ];
-        
+
 //         const missingProperties = requiredProperties.filter(property =>!Object.keys(movieData).includes(property))
-        
+
 //         //* verifies all properties are present in the incoming data
 //         if(missingProperties.length > 0){
 //             throw new Error('All properties are required');
@@ -110,4 +92,3 @@ module.exports = {
 //         }
 //     },
 // }
-
