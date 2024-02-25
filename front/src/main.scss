@@ -5,6 +5,7 @@ body {
   color: #dddcdc;
   font-family: "Roboto", sans-serif;
   font-weight: 200;
+  position: relative;
 }
 
 .header {
@@ -17,4 +18,16 @@ img {
 
 .btn {
   transition-duration: 0.06s;
+}
+
+.return-btn {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+  width: 15rem;
+
+  &:hover {
+    box-shadow: 0 0 20px rgb(17, 109, 230);
+  }
 }

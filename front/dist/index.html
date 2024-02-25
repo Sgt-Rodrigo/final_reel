@@ -23,7 +23,7 @@
 <script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
 
 <body>
-    <header class="header p-1">
+    <header class="header p-1" id="header">
         <nav class="navbar navbar-expand-lg px-3" data-bs-theme="dark">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -42,8 +42,10 @@
                         <a class="nav-link test" href="./views/add_movie_form/add_movie_form.html" id="add-movies">
                             Add-Movies
                         </a>
-                        <a class="nav-link" href="#">Podcast</a>
-                        <a class="btn btn-outline-altpink btn-lg py-1 px-5" href="./views/subscribe_form/subscribe_form.html">SUBSCRIBE</a>
+                        <a class="nav-link" href="https://www.youtube.com/@joerogan/featured"
+                            target="_blank">Podcast</a>
+                        <a class="btn btn-outline-altpink btn-lg py-1 px-5"
+                            href="./views/subscribe_form/subscribe_form.html">SUBSCRIBE</a>
                     </div>
                 </div>
             </div>
@@ -80,7 +82,8 @@
                     </div>
 
                     <div class="btn-group gap-3 d-flex flex-column flex-sm-row z-2" id="cta-button-group">
-                        <a href="./views/subscribe_form/subscribe_form.html" class="btn btn-altpink btn-lg">SUBSCRIBE</a>
+                        <a href="./views/subscribe_form/subscribe_form.html"
+                            class="btn btn-altpink btn-lg">SUBSCRIBE</a>
                         <a href="./views/add_movie_form/add_movie_form.html" class="btn btn-outline-altgreen btn-lg"
                             id="add-movies">Add-Movies</a>
                         <a href="#grid-title" class="btn btn-outline-altyellow btn-lg">Today's Grid</a>
@@ -144,6 +147,10 @@
             </div>
         </div>
     </footer>
+
+    <div class="return-btn">
+        <a href="#header"><img src="58409dd8c334226a2340.png" alt="return-btn"></a>
+    </div>
 </body>
 
 </html>
