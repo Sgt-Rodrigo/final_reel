@@ -1,10 +1,14 @@
+@use "../../../sass-partials/variables" as *;
+@use "../../../sass-partials/utils" as *;
 @import "bootstrap/scss/bootstrap";
 
 body {
   background-color: #303030;
 }
 
-.main-container, .left, .right {
+.main-container,
+.left,
+.right {
   height: 100svh;
 }
 
@@ -12,4 +16,12 @@ body {
   background-color: gray;
 }
 
+.left-image {
+  width: 80%;
+}
 
+.form {
+  width: 60%;
+  margin: 0 auto;
+  color: black;
+}

@@ -4,14 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Limelight&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <title>Subscribe</title>
 <script defer src="../../runtime.bundle.js"></script><script defer src="../../subscribe_form.bundle.js"></script></head>
 
 <body style="background-color: #303030; color: #fff">
     <div class="container-fluid main-container">
         <div class="row">
-            <div class="col left" >first half</div>
-            <div class="col right">second half</div>
+            <div class="col left d-none d-sm-flex flex-column justify-content-center align-items-center" >
+                <div class="left-image">
+                    <img class="rounded-5" src="../../c879b48b49a668ef3b67.jpg" alt="subscribe-image">
+                </div>
+            </div>
+
+            <div class="col right d-flex flex-column justify-content-center align-items-center">
+                <div class="right-text text-center">
+                    <div class="">
+                        <h1 class="limelight-sm">Subscribe</h1>
+                        <p class="roboto-mono-regular">"Stay in the loop with our newsletter! <em>Get the latest updates, exclusive content, and special offers delivered right to your inbox.</em> Join our community of movie enthusiasts today!".</p>
+                                        </div>
+                      <div class="right-form">
+                        <form action="#" class=".form-control-sm form">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="Name">
+                                <label for="floatingInput">Name</label>
+                              </div>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                <label for="floatingInput">Email address</label>
+                              </div>
+                              <div class="form-floating">
+                                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                <label for="floatingPassword">Password</label>
+                              </div>
+                        </form>
+                      </div>
+                    </div>
+            </div>
         </div>
        
     </div>
