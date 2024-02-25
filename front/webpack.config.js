@@ -11,13 +11,17 @@ const stylesHandler = isProduction
 const config = {
   entry: {
     index: path.resolve(__dirname, "./src/index.js"),
-    add_movie_form: path.resolve(__dirname,"./src/views/add_movie_form/add_movie_form.js"
+    subscribe_form: path.resolve(
+      __dirname,
+      "./src/views/subscribe_form/subscribe_form.js"
     ),
+    // add_movie_form: path.resolve(__dirname,"./src/views/add_movie_form/add_movie_form.js"
+    // ),
   },
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].bundle.js",
-    clean: true,   
+    clean: true,
   },
   devtool: "source-map",
   //*? this server set up watches the 'src'> slower
@@ -32,18 +36,18 @@ const config = {
   //   hot: true,
   //   compress: true,
   //   historyApiFallback: true,
-  // }, 
+  // },
   //*? this one is simpler, used along with watch script
-    devServer: {
-      static: './dist',
-      open: true,
-      host: 'localhost',
-      port: 3000,     
-      historyApiFallback: true,
-    },
-    optimization: {
-      runtimeChunk: 'single',
-    }, //*for several entry points
+  devServer: {
+    static: "./dist",
+    open: true,
+    host: "localhost",
+    port: 3000,
+    historyApiFallback: true,
+  },
+  optimization: {
+    runtimeChunk: "single",
+  }, //*for several entry points
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "src/index.html"), //*?watch this template
@@ -51,12 +55,22 @@ const config = {
       chunks: ["index"], //*? the js to inject in this html is here.
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "src/views/add_movie_form/add_movie_form.html"
+      template: path.resolve(
+        __dirname,
+        "src/views/add_movie_form/add_movie_form.html"
       ),
       filename: "views/add_movie_form/add_movie_form.html",
       chunks: ["add_movie_form"],
     }),
-      // Add your plugins here
+    new HtmlWebpackPlugin({
+      template: path.resolve(
+        __dirname,
+        "src/views/subscribe_form/subscribe_form.html"
+      ),
+      filename: "views/subscribe_form/subscribe_form.html",
+      chunks: ["subscribe_form"],
+    }),
+    // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
   ],
   module: {
@@ -75,8 +89,8 @@ const config = {
       },
 
       {
-          test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif|jpeg|ico)$/i,
-          type: 'asset',
+        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif|jpeg|ico)$/i,
+        type: "asset",
       },
 
       // Add your rules for custom modules here

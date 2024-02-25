@@ -13,11 +13,10 @@ async function getAddMovieForm(req, res) {
 }
 
 async function addMovie(req, res) {
-  // const { title, year, director, duration, genre, rate, poster} = req.body;  
-    const newMovie = await moviesService.addMovie(req.body);
-    //* redirects user after promise resolv
-    res.redirect("http://localhost:3000/");
-    // res.status(201).json(newMovie); 
+  // const { title, year, director, duration, genre, rate, poster} = req.body;
+  const newMovie = await moviesService.addMovie(req.body);
+  //* sends the data back to render new card without reload
+  res.json(newMovie);
 }
 
 async function getMovieById(req, res) {

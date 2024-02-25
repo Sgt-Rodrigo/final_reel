@@ -1,13 +1,19 @@
 const axios = require("axios");
 
 const addMoviesBtns = document.querySelectorAll("#add-movies");
-const test = document.querySelector('.test');
-const heroCtaContainer = document.querySelector("#hero-cta__text");
+const paraContainer = document.querySelector("#hero-cta__para-container");
 const ctaPara = document.querySelector("#hero-cta__para");
-const btnGroup = document.querySelector("#cta-button-group");
 const path = "http://localhost:3001/movies/add-movie";
 
+//*! requests the form to server
 async function fetchForm() {
+  //*? Prevents multiple forms being deployed by unnecessary clicking
+  const existingForm = document.querySelector(".form-container");
+  if (existingForm) {
+    return;
+  }
+
+  //*? fetches form
   try {
     const response = await axios.get(path);
 
@@ -15,27 +21,24 @@ async function fetchForm() {
       throw new Error("Failed to fetch data");
     }
 
-    //* Prevents multiple form placement and keeps the posibility of new form request
-    const existingForm = document.querySelector(".form-container");
-    if (existingForm) {
-      existingForm.remove();
-    }
-
-    //*remove paragraph
-    ctaPara.remove();
+    //*removes paragraph
+    paraContainer.remove();
 
     //*injects the form
-    const formHtml = response.data;
+    const formHtml = response.data; //*html string
+    const ctaTextContainer = document.querySelector("#hero-cta__text");
     const formContainer = document.createElement("div");
     formContainer.classList.toggle("form-container");
+    formContainer.id = "form-container";
     formContainer.innerHTML = formHtml;
-    heroCtaContainer.insertBefore(formContainer, btnGroup);
+    ctaTextContainer.append(formContainer);
   } catch (error) {
     console.log(error);
     alert("failed to load form, retry later");
   }
 }
 
+//*! targets two btns with same functionality
 addMoviesBtns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -43,8 +46,3 @@ addMoviesBtns.forEach((btn) => {
     fetchForm();
   });
 });
-
-
-// test.addEventListener('click', (e)=>{
-//     e.preventDefault();
-// })

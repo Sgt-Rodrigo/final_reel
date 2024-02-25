@@ -1,23 +1,17 @@
-
-
-@import 'node_modules/bootstrap/scss/_functions';
-@import 'node_modules/bootstrap/scss/_variables';
-
+@import "node_modules/bootstrap/scss/_functions";
+@import "node_modules/bootstrap/scss/_variables";
 
 $custom-theme-colors: (
-    'graydark': #151515,
-    'whitebone': #E0D7C8,
+  "graydark": #151515,
+  "whitebone": #e0d7c8,
 
-
-    'altyellow': rgb(237, 241, 7),
-    'altgreen': rgb(28, 237, 69),
-    'altpink': rgb(215, 10, 161),
-
-    "altlight": #f2ebfa,
-    "altdark": #522192
+  "altyellow": rgb(237, 241, 7),
+  "altgreen": rgb(28, 237, 69),
+  "altpink": rgb(215, 10, 161),
+  "altlight": #f2ebfa,
+  "altdark": #522192,
 );
 
 $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 
-@import 'bootstrap/scss/bootstrap';
-
+@import "bootstrap/scss/bootstrap";

@@ -1,0 +1,15 @@
+@import "bootstrap/scss/bootstrap";
+
+body {
+  background-color: #303030;
+}
+
+.main-container, .left, .right {
+  height: 100svh;
+}
+
+.left {
+  background-color: gray;
+}
+
+

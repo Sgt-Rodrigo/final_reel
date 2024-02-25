@@ -1,96 +1,20 @@
-@use './sass-partials/forward';
+@use "./sass-partials/forward";
 
-
-
-body{
-    background-color: #303030;
-    color: #dddcdc;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
+body {
+  background-color: #303030;
+  color: #dddcdc;
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
 }
 
 .header {
-    background-color: black;
+  background-color: black;
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
 .btn {
-    transition-duration: 0.06s;
+  transition-duration: 0.06s;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// //*header - navbar
-
-// .header {
-//     background-color: #252525;
-// }
-
-// .brand__logo {
-//     font-family: "Limelight", sans-serif;
-//     font-weight: 400;
-//     font-size: 4rem;
-//     text-align: center;
-//     //*mask effect
-//     background-image: linear-gradient(to right, rgb(95, 70, 224), rgb(237, 241, 7));
-//     background-clip: text;
-//     color: transparent;
-//     background-size: 200%;
-//     animation: bg-animation 4s linear infinite alternate;   
-// }
-
-// @keyframes bg-animation {
-//     0% {
-//         background-position: 0% 50%;
-//         background-size: 200% 100%;
-//     }
-//     50% {
-//         background-position: 100% 50%;
-//         background-size: 200% 100%;
-//     }
-//     100% {
-//         background-position: 0% 50%;
-//         background-size: 200% 100%;
-//     }
-// }
-
-// .log-line{
-//     text-align: center;
-// }
-
-// ul[role="list"] {
-//     display: flex;
-//     align-items: center;
-//     gap: 1.5rem;
-// }
-
-// .nav-link {
-//     font-family: "Roboto Mono", monospace;
-//     font-optical-sizing: auto;
-//     font-style: normal;
-//     font-size: 1.5rem;
-
-//     &:hover {
-//         opacity: 0.7;
-//     }
-// }
-

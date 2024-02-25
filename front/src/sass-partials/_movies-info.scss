@@ -1,29 +1,60 @@
-//*? the card grid
+@use "./variables" as *;
 
-// section.movies-info {
-//     background-color: rgb(209, 207, 207);
-// }
+//*? card grid
 
 .movies-info {
-    padding-top: 4rem;
+  padding-top: 4rem;
 
-    &__divider {
-        width: 50%;
-        margin: 2rem auto;
-    }
+  &__divider {
+    width: 50%;
+    margin: 2rem auto;
+  }
 }
 
 .grid-title {
-    text-transform: uppercase;
-    // color: > inherited from body
+  text-transform: uppercase;
 }
 
 .card {
-    cursor:pointer;
-    transform: scale(1);
-    transition: transform ease-out 0.2s;
-    &:hover {
-        transform: scale(1.05)
-    }
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform ease-out 0.2s;
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
+//*? card overlay info
+
+.card-img-overlay {
+  opacity: 0;
+  transition: opacity ease-in-out 0.3s;
+}
+
+.card-img-overlay:hover {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 30%, transparent);
+  color: white;
+  opacity: 1;
+}
+
+.card-title, .card-text {
+  opacity: 0.8;
+}
+
+.card-title {
+  font-size: 2rem;
+
+  @media (min-width: 600px) {
+    font-size: 4em;
+  }
+}
+
+.card-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+
+
+  @media (min-width: 600px) {
+    font-size: 2rem;
+  }
+}
