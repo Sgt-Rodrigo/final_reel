@@ -1,3 +1,4 @@
+//*? creates async function to connect to DB (it is called in index.js)
 require('dotenv').config();
 const mongoose = require('mongoose');
 

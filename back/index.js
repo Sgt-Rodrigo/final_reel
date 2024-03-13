@@ -1,6 +1,7 @@
+//*? dotenv requirement should come before the app.
+require('dotenv').config();
 const app = require('./src/server');
 const dbCon = require('./src/config/dbCon');
-require('dotenv').config();
 
 const port = process.env.SERVER_PORT || 3002;
 

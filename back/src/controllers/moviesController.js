@@ -1,3 +1,4 @@
+//*? Controllers are the 'handlers'
 const moviesService = require("../services/moviesService");
 const catchAsync = require("../utils/catchAsync");
 
